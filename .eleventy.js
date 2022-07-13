@@ -3,6 +3,7 @@ const { execSync } = require("child_process");
 module.exports = function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addWatchTarget('./src/css/tailwind.css');
+  eleventyConfig.addPassthroughCopy({"node_modules/flowbite/dist": "lib/flowbite"} )
   eleventyConfig.addPassthroughCopy('./src/img');
   eleventyConfig.on('eleventy.after', async () => {
     console.log('Building Tailwind…');
