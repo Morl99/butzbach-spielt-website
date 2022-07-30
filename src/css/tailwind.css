@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base{
+    h2 {
+      @apply uppercase tracking-wide text-indigo-500 font-semibold text-2xl;
+    }
+    .cms-editor-visual {
+        @apply space-y-2 prose prose-slate prose-headings:text-indigo-500 prose-headings:text-semibold prose-headings:uppercase prose-headings:tracking-wide prose-ul:list-none prose-ul:pl-0;
+    }
+  }
